@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szabó Elek | Story Mode</title>
+  <meta
+    name="description"
+    content="Szabó Elek animált, modern személyes oldala rendszergazdai, infrastruktúra-üzemeltetési és szakmai tapasztalatok bemutatására."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+    <div class="ambient ambient-c" aria-hidden="true"></div>
+    <div class="spark-field" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#nyitolap">
+        <span class="brand-dot"></span>
+        Szabó Elek
+      </a>
+
+      <nav aria-label="Fő navigáció">
+        <a href="#tortenet">Sztori</a>
+        <a href="#utvonal">Szintek</a>
+        <a href="#skillset">Szupererők</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+      </nav>
+
+      <span class="topbar-line" id="scroll-progress" aria-hidden="true"></span>
+    </header>
+
+    <main>
+      <section class="hero section-panel" id="nyitolap">
+        <div class="hero-stage reveal" id="hero-stage">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <div class="stage-ring" aria-hidden="true"></div>
+
+          <div class="float float-card">
+            <div class="orbit-card" data-parallax="18">
+              <span class="orbit-card-icon"></span>
+            </div>
+          </div>
+
+          <div class="float float-pill-a">
+            <div class="stage-pill" data-parallax="10">Windows + Linux</div>
+          </div>
+
+          <div class="float float-pill-b">
+            <div class="stage-pill stage-pill-alt" data-parallax="14">XP: infrastruktúra</div>
+          </div>
+
+          <div class="spark spark-a"></div>
+          <div class="spark spark-b"></div>
+          <div class="spark spark-c"></div>
+
+          <div class="float float-mascot">
+            <svg
+              class="guide-mascot"
+              data-parallax="28"
+              viewBox="0 0 420 420"
+              role="img"
+              aria-label="Színes, lebegő, eredeti kabalafigura"
+            >
+              <defs>
+                <linearGradient id="guideGradient" x1="18%" y1="10%" x2="84%" y2="88%">
+                  <stop offset="0%" stop-color="#3ff58c" />
+                  <stop offset="36%" stop-color="#25d8ff" />
+                  <stop offset="72%" stop-color="#5f7fff" />
+                  <stop offset="100%" stop-color="#f058ff" />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M214 72c29 0 48 18 59 43c10 21 23 31 49 39c31 10 53 34 53 66c0 31-18 54-50 67c-18 8-27 18-34 38c-11 31-37 53-70 53c-32 0-54-18-69-49c-9-18-22-28-42-34c-37-11-60-37-60-71c0-31 21-54 54-65c20-7 31-17 37-35c12-34 37-52 73-52z"
+                fill="url(#guideGradient)"
+                stroke="#ffffff"
+                stroke-width="16"
+                stroke-linejoin="round"
+              />
+
+              <ellipse cx="157" cy="208" rx="28" ry="20" fill="#d9fff2" opacity="0.72" />
+              <ellipse cx="269" cy="196" rx="28" ry="20" fill="#dff2ff" opacity="0.72" />
+              <circle cx="167" cy="198" r="13" fill="#2a2bb2" />
+              <circle cx="256" cy="186" r="13" fill="#2a2bb2" />
+
+              <path
+                d="M187 258c17 16 36 24 60 21c15-2 28-9 38-19"
+                fill="none"
+                stroke="#1942d8"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M206 219l20 50c3 8 10 12 18 10c9-1 14-10 12-19l-4-21"
+                fill="none"
+                stroke="#1942d8"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M219 124c16 3 28 14 34 30"
+                fill="none"
+                stroke="#2b67ff"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M172 132c-15 5-24 15-31 31"
+                fill="none"
+                stroke="#2b67ff"
+                stroke-width="7"
+                stroke-linecap="round"
+              />
+
+              <ellipse cx="148" cy="305" rx="24" ry="16" fill="#f058ff" />
+              <ellipse cx="268" cy="295" rx="24" ry="16" fill="#4266ff" />
+              <ellipse cx="126" cy="321" rx="18" ry="12" fill="#d212db" />
+              <ellipse cx="286" cy="314" rx="18" ry="12" fill="#2671ff" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Animált személyes oldal / modern önéletrajz / egyedi vizuál</p>
+          <p class="identity-chip">Szabó Elek • Rendszergazda / infrastruktúra-üzemeltetés</p>
+          <h1>
+            <span class="hero-pretitle">Kapcsold be a</span>
+            STORY <em>MODE</em>
+          </h1>
+          <p class="lead">
+            Hardveres és szervizes háttérből építkezve jutottam el a teljes infrastruktúrák
+            önálló üzemeltetéséig. Windows- és Linux-környezetekben dolgozom, Microsoft 365,
+            hybrid Azure AD, virtualizáció, mentés és napi üzemeltetési feladatok mentén.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#utvonal">Megnézem a szinteket</a>
+            <a class="button button-secondary" href="#kapcsolat">Kapcsolat</a>
+          </div>
+
+          <ul class="hero-stats">
+            <li>
+              <span>Tapasztalat</span>
+              <strong>10+ év műszaki és IT háttér</strong>
+            </li>
+            <li>
+              <span>Fókusz</span>
+              <strong>Windows, Linux, M365, üzemeltetés</strong>
+            </li>
+            <li>
+              <span>Erősség</span>
+              <strong>End-to-end infrastruktúra átlátás</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-panel intro-section reveal" id="tortenet">
+        <div class="section-heading">
+          <p class="eyebrow">Eredettörténet</p>
+          <h2>Az IT számomra nem csak munkakör, hanem folyamatos fejlődési terep.</h2>
+        </div>
+
+        <div class="intro-grid">
+          <article class="story-card spotlight-card">
+            <p class="card-kicker">Röviden rólam</p>
+            <p class="spotlight-text">
+              A hardveres oldalról indultam, ma pedig több területet átfogó infrastruktúrát
+              látok át és üzemeltetek önállóan, a napi hibakezeléstől a rendszer-szintű működésig.
+            </p>
+            <div class="chip-row">
+              <span>önállóság</span>
+              <span>rendszerszemlélet</span>
+              <span>fejlődési igény</span>
+            </div>
+          </article>
+
+          <article class="story-card narrative-card">
+            <p>
+              Az elmúlt években a klasszikus szervizes és hardveres feladatoktól fokozatosan
+              jutottam el oda, hogy szervereket, Microsoft-környezeteket, mentéseket,
+              virtualizációt és hálózati elemeket is magabiztosan kezelek.
+            </p>
+            <p>
+              A motivációm egyszerű: nem szeretnék egy helyben maradni. Olyan feladatok érdekelnek,
+              ahol van felelősség, technikai mélység és valódi szakmai előrelépés.
+            </p>
+          </article>
+
+          <article class="story-card mission-card">
+            <p class="card-kicker">Amit keresek</p>
+            <ul class="mission-list">
+              <li>Komplexebb infrastruktúrák és magasabb felelősségi kör.</li>
+              <li>Naprakész technológiák és valódi szakmai fejlődés.</li>
+              <li>Önálló, mégis értékteremtő munkavégzés.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-panel level-section" id="utvonal">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Szintek</p>
+          <h2>Az eddigi utam állomásai egymásra épülve hozták meg a mai szakmai szintemet.</h2>
+        </div>
+
+        <div class="level-board">
+          <article class="level-card reveal">
+            <div class="level-badge">01</div>
+            <div class="level-copy">
+              <p class="level-tag">2013 - 2014 / Fusion Computer</p>
+              <h3>Szerviz, eladás, koordináció</h3>
+              <p>
+                Itt épült fel az alap: számítógép-szerviz, értékesítés, munkafolyamatok koordinálása,
+                logisztika és beszerzés. Ez a szakasz adta meg a technikai és operatív szemléletet.
+              </p>
+            </div>
+          </article>
+
+          <article class="level-card reveal">
+            <div class="level-badge">02</div>
+            <div class="level-copy">
+              <p class="level-tag">2016 - 2021 / Damit Informatika</p>
+              <h3>Rendszergazdából rendszermérnöki szint</h3>
+              <p>
+                Windows Server, Exchange, Microsoft 365, virtualizáció, NAS, SAN, szervertelepítés,
+                monitoring és alap hálózati-biztonsági feladatok. Itt vált a szakmai irány egyértelművé.
+              </p>
+            </div>
+          </article>
+
+          <article class="level-card reveal">
+            <div class="level-badge">03</div>
+            <div class="level-copy">
+              <p class="level-tag">2021 - jelenleg / Copy Depo</p>
+              <h3>Teljes infrastruktúra-üzemeltetés</h3>
+              <p>
+                Windows- és Linux-alapú környezet, több tucat szerver, fizikai hostok,
+                Palo Alto tűzfal, Veeam mentés, hybrid Azure AD, PowerShell és teljes körű napi üzemeltetés.
+              </p>
+            </div>
+          </article>
+
+          <article class="level-card reveal">
+            <div class="level-badge">04</div>
+            <div class="level-copy">
+              <p class="level-tag">Következő szint</p>
+              <h3>Nagyobb kihívás, mélyebb szakmai tér</h3>
+              <p>
+                Olyan szerepkört keresek, ahol a meglévő üzemeltetési tapasztalatomra építve
+                még összetettebb rendszerekkel, modernebb eszközökkel és magasabb felelősséggel dolgozhatok.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="marquee-panel reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Windows Server</span>
+          <span>Linux</span>
+          <span>Microsoft 365</span>
+          <span>Hybrid Azure AD</span>
+          <span>Veeam</span>
+          <span>PowerShell</span>
+          <span>VMware</span>
+          <span>Palo Alto</span>
+          <span>Windows Server</span>
+          <span>Linux</span>
+          <span>Microsoft 365</span>
+          <span>Hybrid Azure AD</span>
+        </div>
+      </section>
+
+      <section class="section-panel power-section reveal" id="skillset">
+        <div class="section-heading">
+          <p class="eyebrow">Szupererők</p>
+          <h2>A fő erősségeim az üzemeltetésben, a problémamegoldásban és az átlátásban vannak.</h2>
+        </div>
+
+        <div class="power-grid">
+          <article class="power-card">
+            <p class="power-icon">01</p>
+            <h3>End-to-end üzemeltetés</h3>
+            <p>Nem csak részfeladatokban, hanem teljes infrastruktúrák működésében gondolkodom.</p>
+          </article>
+
+          <article class="power-card">
+            <p class="power-icon">02</p>
+            <h3>Microsoft környezetek</h3>
+            <p>Windows Server, Exchange, Microsoft 365 és hybrid Azure AD környezetekkel dolgoztam.</p>
+          </article>
+
+          <article class="power-card">
+            <p class="power-icon">03</p>
+            <h3>Virtualizáció és mentés</h3>
+            <p>VMware, ESXi, Hyper-V és Veeam használata napi szintű üzemeltetési szemlélettel.</p>
+          </article>
+
+          <article class="power-card">
+            <p class="power-icon">04</p>
+            <h3>Hardver és hibakeresés</h3>
+            <p>Szerver, NAS, SAN, PC, laptop, nyomtató és alap hálózati-biztonsági ismeretek egy helyen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-panel contact-section reveal" id="kapcsolat">
+        <div class="contact-copy">
+          <p class="eyebrow">Kapcsolat</p>
+          <h2>Ha olyan embert keresel, aki önállóan visz rendszereket, itt elérsz.</h2>
+          <p>
+            Nyitott vagyok olyan lehetőségekre, ahol stabil üzemeltetési alapra,
+            széles technikai rálátásra és fejlődési szándékra van szükség.
+          </p>
+
+          <a class="button button-primary" href="mailto:szabo.elek@outlook.com">Írj nekem</a>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-label">Elérhetőség</p>
+          <a href="mailto:szabo.elek@outlook.com">szabo.elek@outlook.com</a>
+          <a href="tel:+36202774713">+36 20 277 4713</a>
+          <p>Magyar anyanyelv / angol középfok</p>
+          <p>Műszaki-informatikai háttér, hálózatépítő és üzemeltető szakirány</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Szabó Elek / Story Mode / 2026</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
