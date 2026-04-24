@@ -231,6 +231,7 @@ main {
 .power-card,
 .contact-card,
 .contact-copy {
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
@@ -405,8 +406,15 @@ main {
   text-transform: uppercase;
 }
 
+.level-tag,
+.level-copy h3 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .identity-chip {
   width: fit-content;
+  max-width: 100%;
   margin: 0;
   padding: 10px 16px;
   border-radius: 999px;
@@ -415,6 +423,7 @@ main {
   color: var(--text);
   font-size: 0.95rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .hero h1,
@@ -462,6 +471,7 @@ main {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions {
@@ -905,6 +915,7 @@ main {
 
   .hero h1 {
     font-size: 3rem;
+    transform: none;
   }
 
   .section-heading h2,
@@ -959,6 +970,40 @@ main {
 
   .hero-pretitle {
     font-size: 0.96rem;
+  }
+
+  .identity-chip {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 18px;
+  }
+
+  .level-board::before {
+    left: 22px;
+  }
+
+  .level-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .level-badge {
+    width: 48px;
+    height: 48px;
+  }
+
+  .level-copy {
+    min-width: 0;
+  }
+
+  .level-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .level-copy h3 {
+    font-size: 1.28rem;
   }
 
   .lead,
