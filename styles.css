@@ -438,7 +438,11 @@ main {
   font-family: var(--display-font);
   font-weight: 900;
   letter-spacing: -0.04em;
+  max-width: 100%;
   text-transform: uppercase;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .hero h1 {
@@ -878,7 +882,7 @@ main {
 
 @media (max-width: 780px) {
   .page-shell {
-    width: min(calc(100% - 22px), var(--max-width));
+    width: min(calc(100% - 16px), var(--max-width));
     padding-top: 12px;
   }
 
@@ -894,7 +898,7 @@ main {
   .level-section,
   .power-section,
   .contact-section {
-    padding: 22px;
+    padding: 18px;
   }
 
   .hero-stage {
@@ -923,7 +927,9 @@ main {
 
   .section-heading h2,
   .contact-copy h2 {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
   }
 
   .level-board::before {
@@ -964,8 +970,17 @@ main {
   }
 
   .power-card h3 {
-    font-size: 1.22rem;
+    font-size: 1.08rem;
     line-height: 1.02;
+  }
+
+  .marquee-track {
+    gap: 16px;
+    font-size: 0.92rem;
+  }
+
+  .marquee-track span::after {
+    margin-left: 16px;
   }
 }
 
@@ -1013,7 +1028,14 @@ main {
 
   .level-copy h3,
   .power-card h3 {
-    font-size: 1.14rem;
+    font-size: 0.98rem;
+    line-height: 1.08;
+  }
+
+  .section-heading h2,
+  .contact-copy h2 {
+    font-size: 1.52rem;
+    line-height: 1.04;
   }
 
   .lead,
