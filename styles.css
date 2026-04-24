@@ -407,8 +407,11 @@ main {
 }
 
 .level-tag,
-.level-copy h3 {
+.level-copy h3,
+.power-card h3,
+.power-card p {
   overflow-wrap: anywhere;
+  hyphens: auto;
   word-break: break-word;
 }
 
@@ -924,15 +927,45 @@ main {
   }
 
   .level-board::before {
-    left: 28px;
+    left: 22px;
   }
 
   .level-card {
-    grid-template-columns: 62px minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
   }
 
   .level-badge {
-    width: 54px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .level-copy {
+    min-width: 0;
+  }
+
+  .level-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .level-copy h3 {
+    font-size: 1.28rem;
+    line-height: 0.98;
+  }
+
+  .power-grid {
+    gap: 14px;
+  }
+
+  .power-card {
+    padding: 18px;
+  }
+
+  .power-card h3 {
+    font-size: 1.22rem;
+    line-height: 1.02;
   }
 }
 
@@ -978,32 +1011,9 @@ main {
     border-radius: 18px;
   }
 
-  .level-board::before {
-    left: 22px;
-  }
-
-  .level-card {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 18px;
-  }
-
-  .level-badge {
-    width: 48px;
-    height: 48px;
-  }
-
-  .level-copy {
-    min-width: 0;
-  }
-
-  .level-tag {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-  }
-
-  .level-copy h3 {
-    font-size: 1.28rem;
+  .level-copy h3,
+  .power-card h3 {
+    font-size: 1.14rem;
   }
 
   .lead,
