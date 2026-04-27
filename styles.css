@@ -491,6 +491,12 @@ main {
   padding-top: 6px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -524,6 +530,13 @@ main {
   color: var(--text);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.button-fortune {
+  color: var(--white);
+  background: linear-gradient(135deg, rgba(64, 245, 135, 0.16), rgba(43, 217, 255, 0.18));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 0 rgba(13, 11, 48, 0.9);
 }
 
 .hero-stats {
@@ -769,6 +782,79 @@ main {
 .contact-copy h2 {
   font-size: clamp(1.5rem, 4.2vw, 4rem);
   line-height: 0.94;
+}
+
+.fortune-card {
+  display: grid;
+  gap: 14px;
+  padding: clamp(18px, 3.2vw, 24px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(64, 245, 135, 0.1), rgba(95, 125, 255, 0.08) 42%, rgba(240, 93, 255, 0.1));
+  box-shadow: 0 10px 32px rgba(10, 8, 43, 0.18);
+}
+
+.fortune-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fortune-label,
+.fortune-meta {
+  margin: 0;
+}
+
+.fortune-label {
+  color: rgba(247, 248, 255, 0.74);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fortune-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #17154d;
+  font-family: var(--display-font);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--yellow), #ffffff);
+  box-shadow: 0 6px 0 rgba(13, 11, 48, 0.82);
+}
+
+.fortune-text {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--display-font);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.fortune-card.is-swapping .fortune-text,
+.fortune-card.is-swapping .fortune-meta,
+.fortune-card.is-swapping .fortune-badge {
+  opacity: 0.2;
+  transform: translateY(4px);
+}
+
+.fortune-meta {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 @container (max-width: 760px) {
@@ -1026,6 +1112,11 @@ main {
     line-height: 1.04;
   }
 
+  .fortune-text {
+    font-size: clamp(0.92rem, 4.1vw, 1.12rem);
+    line-height: 1.14;
+  }
+
   .marquee-track {
     gap: 16px;
     font-size: 0.92rem;
@@ -1097,6 +1188,28 @@ main {
   .power-section .section-heading h2 {
     font-size: clamp(1.06rem, 5vw, 1.28rem);
     line-height: 1.08;
+  }
+
+  .contact-actions {
+    display: grid;
+  }
+
+  .contact-actions .button {
+    width: 100%;
+  }
+
+  .fortune-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .fortune-text {
+    font-size: 0.9rem;
+    line-height: 1.16;
+  }
+
+  .fortune-meta {
+    font-size: 0.88rem;
   }
 
   .marquee-panel {

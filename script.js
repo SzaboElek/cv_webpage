@@ -5,6 +5,44 @@ const sections = document.querySelectorAll("main section[id]");
 const progressBar = document.getElementById("scroll-progress");
 const heroStage = document.getElementById("hero-stage");
 const parallaxItems = heroStage ? heroStage.querySelectorAll("[data-parallax]") : [];
+const fortuneButton = document.getElementById("fortune-button");
+const fortuneCard = document.querySelector(".fortune-card");
+const fortuneText = document.getElementById("fortune-text");
+const fortuneMeta = document.getElementById("fortune-meta");
+const fortuneBadge = document.getElementById("fortune-badge");
+
+const fortunes = [
+  {
+    badge: "Mai löket",
+    text: "A jó rendszer akkor a legerősebb, amikor csendben, stabilan végzi a dolgát.",
+    meta: "A láthatatlan minőség sokszor többet ér, mint a látványos improvizáció.",
+  },
+  {
+    badge: "IT mantra",
+    text: "A jó hibakeresés nem kapkodás, hanem jó kérdések sorozata.",
+    meta: "A legtöbb probléma gyorsabban oldódik meg, ha előbb pontosan definiálod.",
+  },
+  {
+    badge: "Mai fokusz",
+    text: "A fejlődés legtöbbször ott kezdődik, ahol a kényelem véget ér.",
+    meta: "Az új szinthez nem szerencse kell, hanem következetes tempó.",
+  },
+  {
+    badge: "Rendszeruzem",
+    text: "A felelősség nem teher, ha pontosan látod a teljes rendszert.",
+    meta: "Az átlátás sokszor nagyobb érték, mint egyetlen különleges technológia.",
+  },
+  {
+    badge: "Szerencsesuti",
+    text: "A jó infrastruktúra olyan, mint a jó alap: nem dicsekszik, de mindent megtart.",
+    meta: "A stabilitás mögött mindig fegyelem, rutin és jó döntések vannak.",
+  },
+  {
+    badge: "Mai mondat",
+    text: "Nem az a cél, hogy mindig gyors legyél, hanem hogy újra és újra megbízható legyél.",
+    meta: "A szakmai hitelesség naponta épül, apró döntésekből.",
+  },
+];
 
 if (!prefersReducedMotion && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -77,6 +115,46 @@ if (heroStage && !prefersReducedMotion) {
   });
 
   heroStage.addEventListener("pointerleave", resetParallax);
+}
+
+if (fortuneButton && fortuneCard && fortuneText && fortuneMeta && fortuneBadge) {
+  const dailySeed = Number(new Date().toISOString().slice(0, 10).replace(/-/g, ""));
+  let currentFortune = dailySeed % fortunes.length;
+
+  const renderFortune = (index, animate = true) => {
+    const next = fortunes[index];
+
+    if (!animate || prefersReducedMotion) {
+      fortuneBadge.textContent = next.badge;
+      fortuneText.textContent = next.text;
+      fortuneMeta.textContent = next.meta;
+      return;
+    }
+
+    fortuneCard.classList.add("is-swapping");
+
+    window.setTimeout(() => {
+      fortuneBadge.textContent = next.badge;
+      fortuneText.textContent = next.text;
+      fortuneMeta.textContent = next.meta;
+      fortuneCard.classList.remove("is-swapping");
+    }, 180);
+  };
+
+  renderFortune(currentFortune, false);
+
+  fortuneButton.addEventListener("click", () => {
+    let nextIndex = Math.floor(Math.random() * fortunes.length);
+
+    if (fortunes.length > 1) {
+      while (nextIndex === currentFortune) {
+        nextIndex = Math.floor(Math.random() * fortunes.length);
+      }
+    }
+
+    currentFortune = nextIndex;
+    renderFortune(currentFortune);
+  });
 }
 
 window.addEventListener("scroll", onScroll, { passive: true });
